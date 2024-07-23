@@ -1,0 +1,145 @@
+{% extends 'pages/base.html' %}
+
+{% block carousel %}
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5" style="margin-bottom: 6rem;">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown text-center">Shipment Details / Information </h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="{% url 'index'%}">Home</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Track</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+    <!--Details-->
+    <!-- Contact End -->
+    {% endblock carousel %}
+
+    
+{% block about %}{% endblock about %}
+
+{% block fact %}
+
+{% endblock fact %}
+
+{% block service %}
+<div class="container-fluid">
+    <div class="container mt-3 mb-5" style="background-color: #FF3E41;;">
+        <div class="track-details">
+            <h3>Shipment Details </h3>
+            <h4>Tracking No: {{track_code.unique_id}} </h4>
+            <hr>
+        </div>
+        <div class="row justify-content-start ">
+            <div class="col-xl-6 col-lg-6">
+               <div class="sender-details">
+                <h3>Sender Details </h3>
+                <ul class="d-flex">
+                    <li>Name:</li>
+                    <li>{{track_code.sender_name}}</li>
+                </ul>
+                <ul class="d-flex">
+                    <li>Phone:</li>
+                    <li>{{track_code.sender_phone}}</li>
+                </ul>
+                <ul class="d-flex">
+                    <li>Email: </li>
+                    <li>{{track_code.sender_email}}</li>
+                </ul>
+                <ul class="d-flex">
+                    <li>Address:</li>
+                    <li>{{track_code.sender_address}}</li>
+                </ul>
+               </div>
+            </div>
+            <!--sender details-->
+            <div class="col-xl-6 col-lg-6">
+                <div class="sender-details">
+                 <h3>Receiver Details </h3>
+                 <ul class="d-flex">
+                     <li>Name:</li>
+                     <li>{{track_code.receiver_name}}</li>
+                 </ul>
+                 <ul class="d-flex">
+                     <li>Phone:</li>
+                     <li>{{track_code.receiver_phone}}</li>
+                 </ul>
+                 <ul class="d-flex">
+                     <li>Email: </li>
+                     <li>{{track_code.receiver_email}}</li>
+                 </ul>
+                 <ul class="d-flex">
+                     <li>Address:</li>
+                     <li>{{track_code.receiver_address}}</li>
+                 </ul>
+                </div>
+             </div>
+ 
+             <!--More details-->
+             <div class="more-details-header">
+                <h3>More Details </h3>
+             </div>
+             <div class="col-xl-6 col-lg-6 ">
+                <div class="more-details">
+                 <ul class="d-flex">
+                     <li>Parcel Descriptiion:</li>
+                     <li>{{track_code.parcel_description}}</li>
+                 </ul>
+                 <ul class="d-flex">
+                     <li>Dispatch Location:</li>
+                     <li>{{track_code.dispatch_location}}</li>
+                 </ul>
+                 <ul class="d-flex">
+                     <li>Courier Status: </li>
+                     <li>{{track_code.status}}</li>
+                 </ul>
+                </div>
+             </div>
+             <div class="col-xl-6 col-lg-6">
+                <div class="more-details">
+                    <ul class="d-flex">
+                        <li>Dispatch Date:</li>
+                        <li>{{track_code.dispatch_date}}</li>
+                    </ul>
+                    <ul class="d-flex">
+                       <li>Estimated Delivery Date:</li>
+                       <li>{{track_code.delivery_date}} </li>
+                   </ul>
+                   <ul class="d-flex">
+                       <li>Current Location:</li>
+                       <li class="scroll-text">
+                        <div class="scroll-container">
+                        <div class="text">{{track_code.current_location}}</div>
+                    </div>
+                       </li>
+                   </ul>
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock service %}
+
+{% block quote %}
+{% endblock quote %}
+
+{% block team %}
+{% endblock team %}
+
+{% block testimonial %}
+{% endblock testimonial %}
+
+{% block pricing %}
+{% endblock pricing %}
+
+{% block feature %}
+{% endblock feature %}
+
+{% block services %}
+{% endblock services %}
+
+

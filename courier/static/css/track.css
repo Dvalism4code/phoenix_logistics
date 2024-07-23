@@ -1,0 +1,83 @@
+.track-details h3{
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding: 20px;
+    background-color: black;
+    color: rgb(196, 196, 196);
+}
+
+.track-details h4{
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.sender-details h3{
+    text-align: start;
+    color: white;
+    background-color: black;
+    padding: 10px;
+}
+
+
+ul{
+    list-style: none;
+    margin-left: -30px;
+}
+li {
+   padding-left: 5px;
+   font-weight: 600;
+   color: #000;
+}
+
+.more-details-header > h3 {
+    color: white !important;
+    padding: 10px;
+    background-color: black !important;
+}
+
+/* text scrolling effect*/
+.scroll-container {
+    width: 250px;
+    height: 20px;
+    overflow: hidden;
+  }
+  
+  .scroll-container .text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 10s linear infinite;
+  }
+  .text {
+    margin-left: 80%;
+    padding-left: 5px;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-300%);
+    }
+  }
+@media (max-width: 595px) {
+    .scroll-container{
+        width: 150px;
+        height: auto;
+    }
+    .text{
+        margin-left: 30%;
+    }
+  
+    @keyframes scroll {
+        0%{
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-150%);
+        }
+    }
+
+        
+    }

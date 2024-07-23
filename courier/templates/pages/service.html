@@ -1,0 +1,41 @@
+{% extends 'pages/base.html' %}
+
+    <!-- Page Header Start -->
+{% block carousel %}
+    <div class="container-fluid page-header py-5" style="margin-bottom: 6rem;">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Services</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="{% url 'index'%}">Home</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Services</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    {% endblock carousel %}
+    <!-- Page Header End -->
+
+    {% block about %}{% endblock about %}
+
+    {% block fact %}
+    {% endblock fact %}
+
+
+    {% block quote %}
+   {% endblock quote %}
+
+   {% block team %}
+   {% endblock team %}
+
+   
+
+   {% block pricing %}
+   {% endblock pricing %}
+
+   {% block feature %}
+   {% endblock feature %}
+
+   {% block services %}
+   {% endblock services %}
+

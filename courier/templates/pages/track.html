@@ -1,0 +1,71 @@
+{% extends 'pages/base.html' %}
+
+{% block carousel %}
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5" style="margin-bottom: 6rem;">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown text-center">Track Shipments</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="{% url 'index'%}">Home</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Track</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Contact Start -->
+<div class="container">
+    <div class="row">
+        <div class="bg-light p-4">
+            <form method="POST" action="{% url 'tracking' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="row g-2">
+                    <div class="col-xl-10 col-lg-10 col-md-8">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="subject" name="track_value" placeholder="Enter your tracking number">
+                            <label for="subject" class="text-small">Enter your tracking number</label>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-2 col-lg-2 col-md-4">
+                        <button class="btn btn-primary w-100 py-3" type="submit">Track</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    <!-- Contact End -->
+    {% endblock carousel %}
+
+
+{% block about %}{% endblock about %}
+
+{% block fact %}
+{% endblock fact %}
+
+{% block service %}
+{% endblock service %}
+
+{% block quote %}
+{% endblock quote %}
+
+{% block team %}
+{% endblock team %}
+
+{% block testimonial %}
+{% endblock testimonial %}
+
+{% block pricing %}
+{% endblock pricing %}
+
+{% block feature %}
+{% endblock feature %}
+
+{% block services %}
+{% endblock services %}
+
+
