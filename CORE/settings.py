@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os 
+import secrets
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,12 +23,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-26v^jg2n-gni0iq2ym1fr4!b08gofosy+7v$^&nac^&xd4n29f'
+
+SECRET_KEY = secrets.token_urlsafe(50)
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.googles.com']
 
 
 # Application definition
@@ -128,7 +132,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # serving static files
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static/"),
+    os.path.join(BASE_DIR, 'courier/static')
 ]
 
 # JAZZMIN ADMIN SETTINGS
@@ -198,3 +202,17 @@ JAZZMIN_UI_TWEAKS = {
         "success": "btn-success"
     }
 }
+
+# SECURE_HSTS_SECONDS
+SECURE_HSTS_SECONDS = 36000 # 1 hour (set a higher value in production)
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+
+# SECURE_SSL_REDIRECT CONFIG
+SECURE_SSL_REDIRECT = True
+
+# SESSION_COOKIE_SECURE CONFIG
+SESSION_COOKIE_SECURE = True
+
+# CSRF_COOKIE_SECURE
+CSRF_COOKIE_SECURE = True
