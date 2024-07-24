@@ -28,9 +28,9 @@ SECRET_KEY = secrets.token_urlsafe(50)
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['www.googles.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # MY INSTALLED APPS 
     'courier',
+     'whitenoise.runserver_nostatic',
 ]
 
 MIDDLEWARE = [
@@ -204,15 +205,5 @@ JAZZMIN_UI_TWEAKS = {
 }
 
 # SECURE_HSTS_SECONDS
-SECURE_HSTS_SECONDS = 36000 # 1 hour (set a higher value in production)
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_PRELOAD = True
 
-# SECURE_SSL_REDIRECT CONFIG
-SECURE_SSL_REDIRECT = True
 
-# SESSION_COOKIE_SECURE CONFIG
-SESSION_COOKIE_SECURE = True
-
-# CSRF_COOKIE_SECURE
-CSRF_COOKIE_SECURE = True
