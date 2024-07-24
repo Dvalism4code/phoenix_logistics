@@ -204,6 +204,15 @@ JAZZMIN_UI_TWEAKS = {
     }
 }
 
-# SECURE_HSTS_SECONDS
+
+
+# Security settings
+SECURE_HSTS_SECONDS = 36000  # 1 hour (set a higher value in production)
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
 
 
